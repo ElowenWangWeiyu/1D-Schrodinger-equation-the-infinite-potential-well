@@ -9,13 +9,13 @@ dx = L / (N-1)
 x = np.linspace(0, L, N)  # Position grid
 
 # Note: ħ²/2m is set to 1 for simplicity, so the Hamiltonian uses a unitless form.
-# Energies are normalized and must be scaled by (ħ²/2m) for physical units.
+# Energies are normalised and must be scaled by (ħ²/2m) for physical units.
 
 # Define the potential (Infinite well)
 V = np.zeros(N)
 V[0] = V[-1] = 1e10  # Infinite potential at the boundaries
 
-# Set up the Hamiltonian matrix (discretized)
+# Set up the Hamiltonian matrix (discretised)
 H = -0.5 * (np.diag(np.ones(N-1), -1) - 2 * np.diag(np.ones(N), 0) + np.diag(np.ones(N-1), 1)) / (dx**2)
 H += np.diag(V)
 
@@ -25,7 +25,7 @@ H_qobj = Qobj(H)
 # Solve for the eigenvalues (energies) and eigenstates (wavefunctions)
 energies, wavefunctions = H_qobj.eigenstates()
 
-# Normalize the wavefunctions
+# Normalise the wavefunctions
 wavefunctions = [wf.full() / np.linalg.norm(wf.full()) for wf in wavefunctions]
 
 # Plot the first few wavefunctions
