@@ -30,9 +30,10 @@ You can modify the simulation parameters in Solving 1D Time-Independent Schrödi
 - Boundary conditions: Adjust the infinite potential values if needed.
 - the order of energy eigenstates and their corresponding wavefunctions visualised.
 
-## Example Output
+## Expected Output
 
 Here is the expected output with the parameters in the script. The output will be different with customised simulation parameters of your choice.
+![wavefunctions visualised (expected output)](wavefunctions%20visualised%20(expected%20output).png) 
 
 ## Dependencies
 - Python 3.x
@@ -41,4 +42,4 @@ Here is the expected output with the parameters in the script. The output will b
 - `qutip`
 
 ## License
-This project is licensed under the
+This project is licensed under MIT License.
